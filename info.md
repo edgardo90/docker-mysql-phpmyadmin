@@ -199,10 +199,12 @@ services:
     container_name: mysql_db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: tu_password_aqui
+      MYSQL_ROOT_PASSWORD: root1234
       MYSQL_DATABASE: mi_base_datos
     ports:
       - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -211,10 +213,14 @@ services:
     depends_on:
       - db
     ports:
-      - "8080:80"
+# PUERTO_DE_TU_MAQUINA(donde lo voy abrir en mi navegador) : PUERTO_DENTRO_DEL_CONTENEDOR
+      - "80:8080"
     environment:
       PMA_HOST: db
-      MYSQL_ROOT_PASSWORD: tu_password_aqui
+
+volumes:
+  mysql_data:
+
 ```
 
 ---
