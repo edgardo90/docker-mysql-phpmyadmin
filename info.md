@@ -214,7 +214,7 @@ services:
       - db
     ports:
 # PUERTO_DE_TU_MAQUINA(donde lo voy abrir en mi navegador) : PUERTO_DENTRO_DEL_CONTENEDOR
-      - "80:8080"
+      - "8080:80"
     environment:
       PMA_HOST: db
 
