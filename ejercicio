@@ -9,6 +9,13 @@ respuesta Gina Carano
 -- Pregunta 2
 -- ¿Cual es la serie con mejor rating promedio segun imdb?
 
+SELECT serie_id , AVG(rating_imdb) AS rating_promedio FROM `Episodios`
+GROUP BY serie_id
+ORDER BY rating_promedio DESC
+//
+SELECT * FROM `Series` 
+WHERE serie_id = 8
+
 
 -- Pregunta 3
 -- ¿Cual es el episodio con la duración más larga?
