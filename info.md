@@ -143,7 +143,18 @@ Docker Compose permite administrar múltiples contenedores con un solo archivo.
 ### 2.1 Instalar Docker Compose Plugin
 
 ```bash
-sudo dnf install docker-compose-plugin -y
+sudo dnf install docker-compose-plugin -
+```
+si da error
+```bash
+sudo mkdir -p /usr/local/lib/docker/cli-plugins
+```
+```bash
+sudo curl -SL https://github.com/docker/compose/releases/download/v2.25.0/docker-compose-linux-x86_64 \
+```
+```bash
+-o /usr/local/lib/docker/cli-plugins/docker-compose
+sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 ```
 
 Instala el plugin oficial compatible con Docker moderno.
