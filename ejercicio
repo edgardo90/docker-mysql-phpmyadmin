@@ -15,7 +15,14 @@ ORDER BY rating_promedio DESC
 //
 SELECT * FROM `Series` 
 WHERE serie_id = 8
-
+//
+Respuesta: Arcane
 
 -- Pregunta 3
 -- ¿Cual es el episodio con la duración más larga?
+
+SELECT * FROM `Episodios`
+ORDER BY duracion DESC
+LIMIT 1
+
+respuesta: The Sign of Three
