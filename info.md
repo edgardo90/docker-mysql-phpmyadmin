@@ -143,7 +143,7 @@ Docker Compose permite administrar múltiples contenedores con un solo archivo.
 ### 2.1 Instalar Docker Compose Plugin
 
 ```bash
-sudo dnf install docker-compose-plugin -
+sudo dnf install docker-compose-plugin -y
 ```
 si da error
 ```bash
